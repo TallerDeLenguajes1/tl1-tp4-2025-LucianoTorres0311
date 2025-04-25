@@ -13,30 +13,39 @@ Tarea T;
 Nodo *Siguiente;
 }Nodo;
 
-Nodo * crearListaVacia()
-{
-    return NULL;
-}
-
-Nodo *CrearNodo(Tarea T)
-{
-    Nodo *Nodos = (Nodo *)malloc(sizeof(Nodo));
-    Nodos->T = T;
-    Nodos->Siguiente = NULL;
-    return Nodos;
-}
+Nodo * crearListaVacia();
+Nodo *CrearNodo(Tarea T);
+void insertarNodos(Nodo **TareasPendientes, Nodo *NuevoNodo);
 
 
 int main()
 {
     int opcion;
-    Nodo * start = crearListaVacia();
+    Nodo * TareasPendientes = crearListaVacia();
+    Nodo * TareasRealizadas = crearListaVacia();
     printf("Ingrese la opcion que desee utilizar \n");
     do 
     {
-        /* code */
+        
     } while (opcion == 0);
     
     return 0;
 }
 
+Nodo *CrearNodo(Tarea T)
+{
+Nodo *Nodos = (Nodo *)malloc(sizeof(Nodo));
+    Nodos->T = T;
+    Nodos->Siguiente = NULL;
+    return Nodos;
+}
+
+Nodo *crearListaVacia()
+{
+    Return NULL;
+}
+void insertarNodos(Nodo **Start, Nodo *NuevoNodo)
+{
+    NuevoNodo->Siguiente = *Start;
+    *Start = NuevoNodo;
+}
